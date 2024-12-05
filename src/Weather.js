@@ -24,7 +24,7 @@ export default function Weather(props) {
 
   function search() {
     const apiKey = "a8d8b06f3c747033oa766c71fbfca38t";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
