@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import WeatherForecastDay from "./WeatherForecastDay.js";
+import WeatherForecast from "./WeatherForecast.css";
 
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
@@ -15,7 +17,7 @@ export default function WeatherForecast(props) {
   }
 
   function load() {
-    let apiKey = "b6c516da5eaaa3o3f0cb04t9c962c4a1";
+    let apiKey = "a8d8b06f3c747033oa766c71fbfca38t";
     let latitude = props.coordinates.latitude;
     let longitude = props.coordinates.longitude;
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${latitude}&lon=${longitude}&key=${apiKey}&units=metric`;
